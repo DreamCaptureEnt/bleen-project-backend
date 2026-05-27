@@ -1,4 +1,8 @@
 function defaultApiBase() {
+  if (typeof window !== 'undefined' && window.location.hostname.endsWith('.workers.dev')) {
+    return `${window.location.origin}/api`;
+  }
+
   return 'http://147.93.29.131:8000/api';
 }
 
