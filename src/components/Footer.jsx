@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ArrowRight, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -128,10 +128,18 @@ export default function Footer() {
       <div className="border-t border-gray-800 px-4 py-5">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500">
           <div>© {new Date().getFullYear()} Bleen — Galaxy Health Care. All Rights Reserved.</div>
-          <div className="flex gap-5">
+          <div className="flex items-center gap-5">
             <a href="#" className="hover:text-teal-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-teal-400 transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-teal-400 transition-colors">Drug License</a>
+            <Link
+              to="/admin/login"
+              aria-label="Admin login"
+              title="Admin login"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-900 text-gray-500 transition-colors hover:text-teal-400"
+            >
+              <Shield size={15} />
+            </Link>
           </div>
         </div>
       </div>
