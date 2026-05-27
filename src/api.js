@@ -1,9 +1,5 @@
 function defaultApiBase() {
-  if (typeof window !== 'undefined' && window.location.hostname.endsWith('.workers.dev')) {
-    return `${window.location.origin}/api`;
-  }
-
-  return 'http://147.93.29.131:8000/api';
+  return 'https://api.dreamcapture.in/api';
 }
 
 const API_BASE = process.env.REACT_APP_API_BASE || defaultApiBase();
